@@ -1,0 +1,25 @@
+{
+  presets: [
+    "@babel/env",
+    ["@babel/typescript", { jsxPragma: "h" }],
+  ],
+  plugins: [
+    ["@babel/transform-react-jsx", { pragma: "h", "pragmaFrag": "Fragment" }],
+    "babel-plugin-twin",
+    "babel-plugin-macros",
+    [
+      "@emotion/babel-plugin-jsx-pragmatic",
+      {
+        "export": "jsx",
+        "import": "__cssprop",
+        "module": "@emotion/react"
+      }
+    ],
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "__cssprop"
+      }
+    ]
+  ]
+}
